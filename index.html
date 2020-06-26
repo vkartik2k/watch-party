@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch-Party</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCDEIf105si4CKaCxC7hEZhsUasS7BCONs",
+            authDomain: "watch-party-stream.firebaseapp.com",
+            databaseURL: "https://watch-party-stream.firebaseio.com",
+            projectId: "watch-party-stream",
+            storageBucket: "watch-party-stream.appspot.com",
+            messagingSenderId: "966316424384",
+            appId: "1:966316424384:web:455dd23ab962a67b17c125"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+
+<body>
+    <div id="overlay">
+        <div id="overlayContainer">
+            <input class="textInput" placeholder="Full Address Of File" id="videoAddress" />
+            <br />
+            <button class="btn" id="loadVideo">Load Video</button>
+        </div>
+    </div>
+
+    <!-- <button id="play">Play</button>
+    <br /> -->
+    <video width="100%" id="movie" controls>
+        <source id="videoInternal" src="file:///media/adminhome/DATA/Kartik/FILM/Rocket Singh.mp4" type="video/mp4">
+    </video>
+    <button class="btn" id="openOverlay">Open Video</button>
+    <script src="index.js"></script>
+</body>
+</html>
